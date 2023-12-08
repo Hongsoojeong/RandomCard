@@ -1,0 +1,138 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+
+    <!--시작 화면-->
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.random_card.StartFragment"
+        tools:layout="@layout/fragment_start">
+
+        <!--시작 ~ 메뉴 화면-->
+        <action
+            android:id="@+id/action_startFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            />
+    </fragment>
+
+
+    <!--메뉴 화면-->
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.random_card.MenuFragment"
+        tools:layout="@layout/fragment_menu">
+
+
+        <!--메뉴 -> 카드 인원 선택 -->
+        <action
+            android:id="@+id/action_MenuFragment_to_SelectPeopleFragment"
+            app:destination="@id/SelectPeopleFragment"
+            />
+
+        <!--메뉴 -> 계산 인원 선택 -->
+        <action
+            android:id="@+id/action_MenuFragment_to_CalculateFragment"
+            app:destination="@id/CalculateFragment"
+            />
+    </fragment>
+
+
+    <!--메뉴 -> 카드 인원 선택 -->
+    <fragment
+        android:id="@+id/SelectPeopleFragment"
+        android:name="com.example.random_card.SelectPeopleFragment"
+        tools:layout="@layout/fragment_select_people">
+
+
+        <action
+            android:id="@+id/action_SelectPeopleFragment_to_SelectCardTwoFragment"
+            app:destination="@id/SelectCardTwoFragment"
+            />
+        <action
+            android:id="@+id/action_SelectPeopleFragment_to_SelectCardThreeFragment"
+            app:destination="@id/SelectCardThreeFragment"
+            />
+        <action
+            android:id="@+id/action_SelectPeopleFragment_to_SelectCardFragment"
+            app:destination="@id/SelectCardFragment"
+            />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/SelectCardTwoFragment"
+        android:name="com.example.random_card.SelectCardTwoFragment"
+        tools:layout="@layout/fragment_select_card_two">
+        <action
+            android:id="@+id/action_SelectCardTwoFragment_to_ResultCardFragment"
+            app:destination="@id/ResultCardFragment"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/SelectCardThreeFragment"
+        android:name="com.example.random_card.SelectCardThreeFragment"
+        tools:layout="@layout/fragment_select_card_three">
+        <action
+            android:id="@+id/action_SelectCardThreeFragment_to_ResultCardFragment"
+            app:destination="@id/ResultCardFragment"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/SelectCardFragment"
+        android:name="com.example.random_card.SelectCardFragment"
+        tools:layout="@layout/fragment_select_card">
+        <action
+            android:id="@+id/action_SelectCardFragment_to_ResultCardFragment"
+            app:destination="@id/ResultCardFragment"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/ResultCardFragment"
+        android:name="com.example.random_card.ResultCardFragment"
+        tools:layout="@layout/fragment_result_card">
+        <action
+            android:id="@+id/action_ResultCardFragment_to_MenuFragment"
+            app:destination="@id/menuFragment"
+            />
+        <action
+            android:id="@+id/action_ResultCardFragment_to_SelectPeopleFragment"
+            app:destination="@id/SelectPeopleFragment"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/CalculateFragment"
+        android:name="com.example.random_card.CalculateFragment"
+        tools:layout="@layout/fragment_calculate">
+        <action
+            android:id="@+id/action_CalculateFragment_to_ResultMoneyFragment"
+            app:destination="@id/ResultMoneyFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ResultMoneyFragment"
+        android:name="com.example.random_card.ResultMoneyFragment"
+        tools:layout="@layout/fragment_result_money">
+        <action
+            android:id="@+id/action_ResultMoneyFragment_to_CalculateFragment"
+            app:destination="@id/CalculateFragment"
+            />
+        <action
+            android:id="@+id/action_ResultMoneyFragment_to_MenuFragment"
+            app:destination="@id/menuFragment"
+            />
+    </fragment>
+
+</navigation>

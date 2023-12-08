@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Random_card" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="AppTheme.NumberPicker" parent="">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHighlight">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="selectableItemBackground">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
+
+    <style name="Theme.Random_card" parent="Base.Theme.Random_card" />
+</resources>
